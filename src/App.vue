@@ -5,14 +5,35 @@
         <img src="https://avatars1.githubusercontent.com/u/15371828?s=88&v=4" height="35" alt="logo">
       </v-avatar>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat @click="$vuetify.goTo('#presentation')">Présentation</v-btn>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn flat @click="$vuetify.goTo('#presentation')">Présentation</v-btn>
         <v-btn flat @click="$vuetify.goTo('#projects')">Mes projets</v-btn>
         <v-btn flat>Compétences</v-btn>
         <v-btn flat>Me contacter</v-btn>
       </v-toolbar-items>
+      <v-menu
+        transition="slide-y-transition"
+        class="hidden-sm-and-up"
+        open-on-hover
+        offset-y>
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-list-tile @click="$vuetify.goTo('#presentation')">
+            <v-list-tile-title>Présentation</v-list-tile-title>
+          </v-list-tile>
+          <v-list-tile @click="$vuetify.goTo('#projects')">
+            <v-list-tile-title>Mes projets</v-list-tile-title>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-title>Compétences</v-list-tile-title>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-title>Me contacter</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-toolbar>
-
+    
     <v-content>
       <router-view></router-view>
     </v-content>
