@@ -60,6 +60,7 @@ export default {
       colors: {
         'ruby': 'red darken-4',
         'python': 'blue darken-3',
+        'html': 'orange darken-3',
         'crystal': 'deep-purple accent-1',
         'go': 'blue accent-4',
         'javascript': 'yellow darken-2',
