@@ -3,7 +3,7 @@
   <v-container fluid>
     <v-layout row>
       <v-flex xs12 sm12 md12 lg12 xl12>
-        <v-parallax height="400" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fairlines-airports.com%2Fwp-content%2Fuploads%2F2016%2F07%2FSwitzerland-Geneva.jpg&f=1">
+        <v-parallax height="400" src="../../static/assets/background.jpg">
           <v-layout column align-center justify-center>
             <h4 style="font-size: 30px">Étudiant passionné par le développement web & software</h4>
           </v-layout>
@@ -36,7 +36,7 @@
     </v-layout>
     <v-divider></v-divider>
 
-    <v-jumbotron id="compétences">
+    <v-jumbotron id="compétences" height="200px">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex>
