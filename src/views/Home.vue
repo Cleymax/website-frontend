@@ -3,7 +3,7 @@
   <v-container fluid>
     <v-layout row>
       <v-flex xs12 sm12 md12 lg12 xl12>
-        <v-parallax height="400" src="../../static/assets/background.jpg">
+        <v-parallax height="400" src="../../static/assets/background.png">
           <v-layout align-center>
           <v-flex>
             <div class="title mb-3">Je suis Anana étudiant passionné par l'informatique et en particulier par le développement full-stack Rails/Vuejs. J'habite tout près de Genève</div>
@@ -13,8 +13,16 @@
       </v-flex>
     </v-layout>
 
-    <v-divider></v-divider>
-    <v-layout row id="projects">
+    <v-jumbotron id="projects" height="200px">
+      <v-container fill-height>
+        <v-layout align-center>
+          <v-flex>
+            <div class="title mb-3">Mes projets</div>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-jumbotron>
+    <v-layout row>
       <v-flex xs12>
         <v-container fluid grid-list-md>
           <v-layout row wrap>
