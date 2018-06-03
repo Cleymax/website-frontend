@@ -28,20 +28,7 @@
         <v-container fluid grid-list-md>
           <v-layout row wrap>
             <v-flex v-for="repo in repos" :key="repo.id" xs12 sm6 md4 lg3 xl2>
-              <v-flex xs12>
-                <v-card :color="repo.color" class="white--text">
-                  <v-card-title primary-title>
-                    <div class="headline">{{ repo.name }}</div>
-                    <div>{{ repo.description }}</div>
-                  </v-card-title>
-                  <v-card-actions>
-                    <v-btn flat dark :href="repo.html_url">Voir sur Github</v-btn>
-                    <v-spacer></v-spacer>
-                    {{ repo.stargazers_count }}<v-icon>favorite</v-icon>
-                    {{ repo.forks_count }}<v-icon>call_split</v-icon>
-                  </v-card-actions>
-                </v-card>
-              </v-flex>
+              <repository :repo="repo"></repository>
             </v-flex>
           </v-layout>
         </v-container>

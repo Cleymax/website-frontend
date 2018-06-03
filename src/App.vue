@@ -33,22 +33,12 @@
         </v-list>
       </v-menu>
     </v-toolbar>
-    
     <v-content>
       <router-view></router-view>
     </v-content>
-
     <v-footer class="pa-3">
       <v-spacer></v-spacer>
       <div>ananagame &copy; {{ new Date().getFullYear() }}</div>
     </v-footer>
   </v-app>
 </template>
-
-<script>
-export default {
-  data () {
-
-  }
-}
-</script>

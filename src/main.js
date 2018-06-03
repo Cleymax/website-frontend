@@ -9,6 +9,8 @@ Vue.use(Router)
 Vue.use(Resource)
 Vue.use(Vuetify)
 
+Vue.component('repository', require('./components/Repository.vue').default)
+
 const router = new Router({
   routes: [
     {
