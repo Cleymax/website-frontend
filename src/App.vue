@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire" :dark="dark">
     <v-toolbar fixed dense>
-      <v-avatar size="30" color="grey lighten-4">
+      <v-avatar size="30">
         <img src="https://avatars1.githubusercontent.com/u/15371828?s=88&v=4" height="35" alt="logo">
       </v-avatar>
       <v-spacer></v-spacer>
@@ -12,7 +12,6 @@
         <span>{{ dark ? 'Thème clair' : 'Thème sombre'}}</span>
       </v-tooltip>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn flat @click="$vuetify.goTo('#presentation')">Présentation</v-btn>
         <v-btn flat @click="$vuetify.goTo('#projects')">Mes projets</v-btn>
         <v-btn flat @click="$vuetify.goTo('#compétences')">Compétences</v-btn>
       </v-toolbar-items>
@@ -23,9 +22,6 @@
         offset-y>
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
         <v-list>
-          <v-list-tile @click="$vuetify.goTo('#presentation')">
-            <v-list-tile-title>Présentation</v-list-tile-title>
-          </v-list-tile>
           <v-list-tile @click="$vuetify.goTo('#projects')">
             <v-list-tile-title>Mes projets</v-list-tile-title>
           </v-list-tile>

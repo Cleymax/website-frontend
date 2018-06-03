@@ -4,24 +4,15 @@
     <v-layout row>
       <v-flex xs12 sm12 md12 lg12 xl12>
         <v-parallax height="400" src="../../static/assets/background.jpg">
-          <v-layout column align-center justify-center>
-            <h4 style="font-size: 30px">Étudiant passionné par le développement web & software</h4>
-          </v-layout>
+          <v-layout align-center>
+          <v-flex>
+            <div class="title mb-3">Je suis Anana étudiant passionné par l'informatique et en particulier par le développement full-stack Rails/Vuejs. J'habite tout près de Genève</div>
+          </v-flex>
+        </v-layout>
         </v-parallax>
       </v-flex>
     </v-layout>
 
-    <v-jumbotron id="presentation">
-      <v-container fill-height>
-        <v-layout align-center>
-          <v-flex>
-            <div class="title mb-3">Je suis Anana étudiant passionné par l'informatique et en particulier par le développement full-stack Rails/Vuejs. J'habite tout près de Genève</div>
-            <v-btn large color="primary" class="mx-0">Voir sur Github</v-btn>
-            <v-btn href="https://discordapp.com/" flat>Discord tag Anana#1189</v-btn>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-jumbotron>
     <v-divider></v-divider>
     <v-layout row id="projects">
       <v-flex xs12>
@@ -35,7 +26,6 @@
       </v-flex>
     </v-layout>
     <v-divider></v-divider>
-
     <v-jumbotron id="compétences" height="200px">
       <v-container fill-height>
         <v-layout align-center>
@@ -49,7 +39,7 @@
       <v-flex xs12>
         <v-container fluid grid-list-md>
           <v-layout row wrap>
-            <v-flex v-for="skill in skills" :key="skill" xs12 sm6 md4 lg3 xl2>
+            <v-flex v-for="skill in skills" :key="skill">
               <v-progress-circular :size="150" :width="30" :rotate="-90" :value="skill.value"
                 :color="colors[skill.name.toLowerCase()]">
                 {{ skill.name }}
@@ -91,15 +81,13 @@ export default {
         }
       ],
       colors: {
-        'ruby': 'red darken-4',
-        'python': 'blue darken-3',
-        'html': 'orange darken-3',
-        'crystal': 'deep-purple accent-1',
+        'ruby': 'red',
+        'python': 'blue',
+        'html': 'amber',
+        'crystal': 'cyan',
         'go': 'blue accent-4',
-        'javascript': 'yellow darken-2',
-        'java': 'orange darken-2',
-        'css': 'deep-purple darken-4',
-        'vue': 'indigo darken-4'
+        'javascript': 'lime',
+        'java': 'deep-orange'
       }
     }
   },

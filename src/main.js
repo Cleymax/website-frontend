@@ -9,6 +9,10 @@ Vue.use(Router)
 Vue.use(Resource)
 Vue.use(Vuetify)
 
+Vue.use(Vuetify, {
+  theme: require('./js/theme.js').default
+})
+
 Vue.component('repository', require('./components/Repository.vue').default)
 
 const router = new Router({
