@@ -13,7 +13,7 @@
       </v-flex>
     </v-layout>
 
-    <v-jumbotron id="projects" height="200px">
+    <v-jumbotron id="projects" height="150px">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex>
@@ -34,7 +34,7 @@
       </v-flex>
     </v-layout>
     <v-divider></v-divider>
-    <v-jumbotron id="compétences" height="200px">
+    <v-jumbotron id="compétences" height="150px">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex>
@@ -57,6 +57,8 @@
         </v-container>
       </v-flex>
     </v-layout>
+    <v-jumbotron id="compétences" height="50px">
+    </v-jumbotron>
   </v-container>
   </main>
 </template>
