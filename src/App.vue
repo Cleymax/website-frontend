@@ -1,10 +1,16 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" :dark="dark">
     <v-toolbar fixed dense>
       <v-avatar size="30" color="grey lighten-4">
         <img src="https://avatars1.githubusercontent.com/u/15371828?s=88&v=4" height="35" alt="logo">
       </v-avatar>
       <v-spacer></v-spacer>
+      <v-tooltip bottom>
+        <v-btn slot="activator" icon @click="switchTheme">
+          <v-icon>invert_colors</v-icon>
+        </v-btn>
+        <span>{{ dark ? 'Thème clair' : 'Thème sombre'}}</span>
+      </v-tooltip>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn flat @click="$vuetify.goTo('#presentation')">Présentation</v-btn>
         <v-btn flat @click="$vuetify.goTo('#projects')">Mes projets</v-btn>
@@ -38,3 +44,18 @@
     </v-footer>
   </v-app>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      dark: false
+    }
+  },
+  methods: {
+    switchTheme () {
+      this.dark = !this.dark
+    }
+  }
+}
+</script>
