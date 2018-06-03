@@ -8,8 +8,7 @@
       <v-toolbar-items class="hidden-xs-only">
         <v-btn flat @click="$vuetify.goTo('#presentation')">Présentation</v-btn>
         <v-btn flat @click="$vuetify.goTo('#projects')">Mes projets</v-btn>
-        <v-btn flat>Compétences</v-btn>
-        <v-btn flat>Me contacter</v-btn>
+        <v-btn flat @click="$vuetify.goTo('#compétences')">Compétences</v-btn>
       </v-toolbar-items>
       <v-menu
         transition="slide-y-transition"
@@ -24,11 +23,8 @@
           <v-list-tile @click="$vuetify.goTo('#projects')">
             <v-list-tile-title>Mes projets</v-list-tile-title>
           </v-list-tile>
-          <v-list-tile>
+          <v-list-tile @click="$vuetify.goTo('#compétences')">
             <v-list-tile-title>Compétences</v-list-tile-title>
-          </v-list-tile>
-          <v-list-tile>
-            <v-list-tile-title>Me contacter</v-list-tile-title>
           </v-list-tile>
         </v-list>
       </v-menu>
